@@ -5613,9 +5613,9 @@ let arr = x.map((arr) => {
 });
 const show = (array) => {
   for (var j = 0; j < arr.length; j++) {
-    datashow(array, arr[j]);
+    datashow(array, arr[j],0);
   }
-  function datashow(array, arr, i = 0) {
+  function datashow(array, arr, i) {
     var len = arr.length;
     if (i > len - 1) {
       return;
