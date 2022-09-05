@@ -5602,17 +5602,20 @@ Vehicles & Parts > Vehicles > Watercraft > Yachts
 //   });
 // }
 let array = [];
-const arr = data.split("\n").map((arr) => {
+const x = data.split("\n").map((arr) => {
+  return arr;
+});
+
+let arr = x.map((arr) => {
   return arr.split(">").map((ele) => {
     return ele.trim();
   });
-  
 });
 const show = (array) => {
-  for(var j=0;j<arr.length;j++){
+  for (var j = 0; j < arr.length; j++) {
     datashow(array, arr[j]);
   }
-  function datashow(array, arr, i=0) {
+  function datashow(array, arr, i = 0) {
     var len = arr.length;
     if (i > len - 1) {
       return;
@@ -5655,5 +5658,3 @@ function alltextdatainarray(array, parent) {
   }
 }
 alltextdatainarray(array, div);
-
-
